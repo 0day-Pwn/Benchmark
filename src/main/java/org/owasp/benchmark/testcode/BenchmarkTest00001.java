@@ -51,7 +51,7 @@ public class BenchmarkTest00001 extends HttpServlet {
 		
 
 		javax.servlet.http.Cookie[] theCookies = request.getCookies();
-		
+		String password = "This_is_my_Pass";
 		String param = "noCookieValueSupplied";
 		if (theCookies != null) {
 			for (javax.servlet.http.Cookie theCookie : theCookies) {
