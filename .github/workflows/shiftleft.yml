@@ -35,6 +35,12 @@ jobs:
       shell: bash
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
+    - name: Extract branch names
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branchs
+    - name: Branch name
+      run: echo running on branch ${GITHUB_REF##*/}
     - name: NG SAST Trunk
       # Removed the --wait since we wont be checking the scan
       if: ${{ github.ref == 'refs/heads/main' }}
