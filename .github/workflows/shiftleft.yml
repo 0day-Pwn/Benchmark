@@ -4,8 +4,11 @@
 name: ShiftLeft
 
 on:
-  pull_request:
   workflow_dispatch:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
 
 jobs:
   NextGen-Static-Analysis:
